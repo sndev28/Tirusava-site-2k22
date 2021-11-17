@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@font-face {
+    font-family: "Samarkan";
+    src: url("/fonts/samarkan/SAMAN___.TTF") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    background: #171529;
+    background-image: url("/img/bg.png");
+    background-size: cover;
+    overflow-x: hidden;
+
+    
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0px;
+    padding-top: 3rem;
+    padding-right: 8rem;
+    width: 100%;
+    justify-content: space-between;  
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .img_container {
+    margin-left: 4rem;
+} */
+
+.logo img {
+    width: 15rem;
+    margin-left: 4rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a {
+    padding-left: 4rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login {
+    background: linear-gradient(98.45deg, #8939ec 0%, #b84df2 100%);
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.15);
+    border-radius: 7px; 
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    width: 100%;
+}
+
+.landing_content {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center; 
+    flex: 1;
+    padding-left: 7.5%;
+    transform: translateY(-50px);
+}
+
+.landing_content .padding_container {
+    margin-right: 35%;
+}
+
+.landing_content .heading {
+    padding-bottom: 10%;
+    background: -webkit-linear-gradient(60deg,  #F3880C 0% ,#ffc27c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+
+
+.landing_content .heading .title, .landing_content .heading .subtitle{
+    /* background: -webkit-linear-gradient(60deg,  #d256ff 0% ,#6601ff 100%); */
+    /* background: -webkit-linear-gradient(60deg,  #F3880C 0% ,#ffc27c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-family: "Samarkan";    
+    z-index: 2;
+}
+
+.landing_content .heading .title {
+    font-size: 10rem;
+}
+
+.landing_content .heading .subtitle {
+    font-size: 8rem;
+}
+
+.landing_content .details {
+    font-size: 18.5px;
+}
+
+.landing_image {
+    display: flex;
+    width: 45vw;
+    margin-right: 5vw;
+    flex: 1;
+}
+
+.landing_image img {
+   width: 100%;
+   height: auto;
+   z-index: 0;
+}
+
+
+
+.live_count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+    width: 50%;
+    text-align: center;    
+}
+
+.count {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 19.5px;
+    font-weight: 200;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 75%;
+
+}
+
+.about .heading {
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.about .underline {
+    width: 74px;
+    height: 6px;
+    background: linear-gradient(90deg, rgba(184, 77, 242, 0.83) 0%, #7C33EA 100%);
+}
+
+.about .about_content {
+    font-size: 19.5px;
+    margin-top: 4rem
+}
+
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+
+.events, .journey {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    border: #ffffff22 solid 0.25px;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    background: linear-gradient(160deg, rgba(239, 239, 239, 0.125) 6.39%, rgba(216, 210, 210, 0.035) 90.2%);
+}
+
+.highlights_heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.heading_title {
+    font-size: 24px;
+    margin-bottom: 4rem;
+}
+
+.events .heading_title {
+    margin-left: 1rem;
+}
+
+.journey .heading_title {
+    margin-right: 1rem;
+}
+
+.highlights_content {
+    width: 80%;
+    font-size: 16.5px;
+}
+
+
+.events_content, .journey_content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
