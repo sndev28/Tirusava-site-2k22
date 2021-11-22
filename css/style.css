@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 @font-face {
     font-family: "Samarkan";
     src: url("/fonts/samarkan/SAMAN___.TTF") format("truetype");
@@ -182,6 +183,17 @@ body {
     font-weight: 200;
 }
 
+.photo_slider, .event_slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    width: 75%;
+}
+
 .about, .memories, .upcoming_events{
     display: flex;
     flex-direction: column;
@@ -189,17 +201,16 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 75%;
 
 }
 
 
-.about .heading, .memories .heading, .upcoming_events {
+.about .heading, .memories .title, .upcoming_events .title{
     font-size: 45px;
     font-weight: 800;
 }
 
-.about .underline, .memories .underline, .upcoming_events {
+.about .underline, .memories .underline, .upcoming_events .underline {
     width: 74px;
     height: 6px;
     background: linear-gradient(90deg, rgba(184, 77, 242, 0.83) 0%, #7C33EA 100%);
@@ -294,6 +305,13 @@ body {
     
 }
 
+.footer_content .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 .footer_content .title .main_heading {
     font-weight: 600;
     font-size: 34px;
@@ -304,11 +322,6 @@ body {
     font-weight: normal;
     font-size: 21px;
     line-height: 31px;
-}
-
-.footer_content .title {
-    display: flex;
-    flex-direction: column;
 }
 
 .footer_content .logo {
@@ -342,12 +355,16 @@ body {
 
 .footer_content .contacts {
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer_content .contacts .content {
     font-weight: 300;
     font-size: 17px;
     padding-top: 2rem;
+    text-align: start;
 } 
 
 .footer_content .contacts .mail {
@@ -373,6 +390,7 @@ body {
 .footer_content .additional_links .links {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding-top: 2rem;
     font-size: 19px;
     line-height: 28px;
@@ -394,4 +412,202 @@ body {
 .footer .credits a {
     color: #1788cd;
 }
+
+
+
+
+
+
+
+.photo_slider_carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.photo_slider_carousel .photos img {
+    width: 386px;
+    border-radius: 5px;
+}
+
+
+.photo_slider .photos .prev_pic, .photo_slider_carousel .photos .next_pic {
+    transform: scale(0.75);
+    opacity: 40%;
+
+}
+
+.arrow {
+    border: solid rgba(255, 255, 255, 0.45);
+    width: 40px;
+    height: 40px;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+}
+  
+.next {
+    transform: scaleY(1.5) rotate(-45deg);
+    -webkit-transform: scaleY(1.5) rotate(-45deg);
+}
+
+.prev {
+    transform: scaleY(1.5) rotate(135deg);
+    -webkit-transform: scaleY(1.5) rotate(135deg);
+}
+
+
+
+
+
+.event_slider_carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.event_card {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    background: linear-gradient(106deg, rgba(216, 210, 210, 0.125) 15.5%, rgba(216, 210, 210, 0.035) 81.22%);
+    margin: 5rem;
+}
+
+.event_card .top {
+    padding: 2.5%;
+}
+
+.event_card .top .content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+
+.event_card .top .content .event_prospects {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.event_card .top .content .event_prospects .heading {
+    display: flex;
+    flex-direction: row;
+}
+
+.event_card .top .content .event_prospects .heading .vertical_line {
+    width: 7px;
+    height: 45px;
+    background: linear-gradient(180deg, #7C33EA 0%, #B84DF2 100%);
+}
+
+.event_card .top .content .event_prospects .heading .event_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Red Hat Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 46px;
+    padding-left: 1rem;
+}
+
+.event_card .top .content .event_prospects .event_details {
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 15.5px;
+    line-height: 23px;
+}
+
+.event_card .top .content .contacts {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+
+}
+
+.event_card .top .content .contacts .contact_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.event_card .top .content .contacts .contact_info .profile_pic, .event_card .top .content .contacts .contact_info .profile_pic img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.event_card .top .content .contacts .contact_info .contact_details {
+    margin-left: 0.5rem;
+}
+
+.event_card .top .content .contacts .contact_info .contact_details .title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.event_card .top .content .contacts .contact_info .contact_details .designation {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.event_card .top .content .contacts .phone {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+.event_card .top .content .contacts .phone .phone_img {
+    margin-right: 0.5rem;
+}
+
+.event_card hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: none;
+}
+
+.event_card .bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5%;
+
+}
+
+.event_card .bottom .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.event_card .bottom .content img {
+    width: 330px;
+    height: 330px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
 
